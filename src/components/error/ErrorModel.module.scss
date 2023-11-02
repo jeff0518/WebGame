@@ -1,3 +1,17 @@
+@use "../../styles/colors" as color;
+@import "../../styles/mixin";
+
 .container {
-  margin: 50rem auto;
+  width: 100vw;
+  height: 100vh;
+  @include center-both;
+  flex-direction: column;
+  background-color: color.$brand-color;
+  h1 {
+    @include text-styles(2rem, 500, color.$gray-10);
+  }
+
+  p {
+    @include text-styles(1rem, 500, color.$gray-10);
+  }
 }
