@@ -1,0 +1,9 @@
+@use "../../styles/colors" as color;
+@import "../../styles/mixin";
+
+.title_container {
+  width: 100%;
+  height: 10vh;
+  padding: 0.5rem 0 0.5rem 3rem;
+  background-color: color.$assistant-blue-color;
+}

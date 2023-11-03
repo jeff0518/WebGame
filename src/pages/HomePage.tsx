@@ -1,7 +1,9 @@
+import Main from "../components/main/Main";
+
 function HomePage() {
   return (
     <>
-      <div>這是首頁</div>
+      <Main />
     </>
   );
 }
