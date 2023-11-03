@@ -1,3 +1,4 @@
+import Card from "./card/Card";
 import style from "./Main.module.scss";
 
 function Main() {
@@ -5,20 +6,9 @@ function Main() {
     <>
       <div className={style.main_container}>
         <div className={style.main_container_section}>
-          <div className={style.cardInbox}>
-            <div
-              className={`${style.cardInbox__side} ${style.cardInbox__side__front}`}
-            >
-              卡片Front
-            </div>
-            <div
-              className={`${style.cardInbox__side} ${style.cardInbox__side__back}`}
-            >
-              卡片Back
-            </div>
-          </div>
-          <div className={style.cardInbox}>卡片2</div>
-          <div className={style.cardInbox}>卡片3</div>
+          <Card color="cardInbox__side__back__color1" />
+          <Card color="cardInbox__side__back__color2" />
+          <Card color="cardInbox__side__back__color3" />
         </div>
       </div>
     </>

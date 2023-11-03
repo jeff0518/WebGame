@@ -36,14 +36,36 @@
         top: 0;
         left: 0;
         width: 100%;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color: color.$gray-11, $alpha: 0.35);
 
         &__front {
-          background-color: red;
+          background-color: color.$gray-2;
         }
 
         &__back {
-          background-color: green;
           transform: rotateY(180deg);
+          &__color1 {
+            background-image: linear-gradient(
+              to right bottom,
+              color.$primary-light-color,
+              color.$primary-color
+            );
+          }
+          &__color2 {
+            background-image: linear-gradient(
+              to right bottom,
+              color.$brand-light-color,
+              color.$brand-color
+            );
+          }
+          &__color3 {
+            background-image: linear-gradient(
+              to right bottom,
+              color.$secondary-light-color,
+              color.$secondary-color
+            );
+          }
         }
       }
 
