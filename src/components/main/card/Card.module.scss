@@ -43,6 +43,38 @@
 
     &__back {
       transform: rotateY(180deg);
+      position: relative;
+
+      .back__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 14rem;
+
+        @include center-both;
+        flex-direction: column;
+        .description {
+          @include text-styles(1rem, 300, color.$gray-7);
+        }
+        .card__button {
+          margin-top: 1.5em;
+          padding: 10px 30px;
+          border: none;
+          background-color: color.$gray-2;
+          border-radius: 10px;
+          @include text-styles(1rem, 500, color.$gray-9);
+
+          &:hover {
+            transform: scale(1.2);
+            background-color: color.$gray-9;
+            color: color.$gray-1;
+            cursor: pointer;
+          }
+        }
+      }
+
       &__color1 {
         background-image: linear-gradient(
           to right bottom,
