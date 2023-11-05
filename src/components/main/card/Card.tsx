@@ -1,11 +1,14 @@
+import { NavLink } from "react-router-dom";
+
 import style from "./Card.module.scss";
 
 interface CardProps {
   color: string;
   card_image: string;
+  gameId: string;
 }
 
-function Card({ color, card_image }: CardProps) {
+function Card({ color, card_image, gameId }: CardProps) {
   return (
     <div className={style.cardInbox}>
       <div
@@ -22,7 +25,9 @@ function Card({ color, card_image }: CardProps) {
             描述遊戲玩法 70%。如果你想要用英文表达 "新增卡片前的格式"，可以使用
             "Formatting for Adding Ca
           </div>
-          <button className={style.card__button}>button 的連結 30%</button>
+          <NavLink to={`/games/${gameId}`}>
+            <button className={style.card__button}>button 的連結 30%</button>
+          </NavLink>
         </div>
       </div>
     </div>
