@@ -18,7 +18,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    border-radius: 3px;
+    border-radius: 30px;
     box-shadow: 0 1.5rem 4rem rgba($color: color.$gray-11, $alpha: 0.35);
 
     &__front {
@@ -26,6 +26,7 @@
 
       .front__img {
         background-size: cover;
+        border-radius: 30px;
         height: 14rem;
         background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
