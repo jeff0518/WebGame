@@ -6,4 +6,8 @@
   height: 10vh;
   padding: 0.5rem 0 0.5rem 3rem;
   background-color: color.$primary-color;
+  .loge {
+    text-decoration: none;
+    color: color.$gray-10;
+  }
 }

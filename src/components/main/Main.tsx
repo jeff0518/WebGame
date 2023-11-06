@@ -10,7 +10,7 @@ function Main() {
             color="cardInbox__side__back__color1"
             card_image="front__img__1"
             title="井字遊戲"
-            description="井字遊戲你不會玩？"
+            description="最先以橫、直、斜連成一線則獲勝，如果棋盤被填滿則平手。"
             gameId="tictactoe"
           />
           <Card

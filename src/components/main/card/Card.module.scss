@@ -32,6 +32,19 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         &__1 {
           width: 100%;
+          background-size: cover;
+          background-image: url(../../../assets/image/tic.png);
+        }
+
+        &__2 {
+          width: 100%;
+          background-size: cover;
+          background-image: url(../../../assets/image/ox.jpg);
+        }
+
+        &__3 {
+          width: 100%;
+          background-size: cover;
           background-image: url(../../../assets/image/ox.jpg);
         }
       }
@@ -57,7 +70,7 @@
         @include center-both;
         flex-direction: column;
         .description {
-          @include text-styles(1rem, 300, color.$gray-7);
+          @include text-styles(1rem, 500, color.$gray-8);
         }
         .card__button {
           margin-top: 1.5em;
