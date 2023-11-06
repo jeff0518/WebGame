@@ -43,11 +43,9 @@ function TicTacTop() {
 
   return (
     <div className={style.container}>
-      {!winner && <p>Hey {currentPlayer}, it's your turn</p>}
-      {winner && winner !== "BOTH" && <p>Congratulations {winner}</p>}
-      {winner && winner === "BOTH" && (
-        <p>Congratulations you're both winners</p>
-      )}
+      {!winner && <p>Hey {currentPlayer} 輪到你了</p>}
+      {winner && winner !== "BOTH" && <p>恭喜 {winner} 是贏家</p>}
+      {winner && winner === "BOTH" && <p>平手</p>}
       <Board
         setSquareValue={setSquareValue}
         squares={squares}
