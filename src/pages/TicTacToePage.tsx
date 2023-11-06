@@ -1,5 +1,11 @@
+import TicTacTop from "../components/tictactop";
+
 function TicTacToePage() {
-  return <h1>這是井字遊戲頁面</h1>;
+  return (
+    <>
+      <TicTacTop />
+    </>
+  );
 }
 
 export default TicTacToePage;

@@ -1,0 +1,18 @@
+.container {
+  width: 300px;
+  margin: 10rem auto;
+
+  p {
+    font-size: 2rem;
+  }
+
+  .reset {
+    margin-top: 2rem;
+    font-size: 2rem;
+    background-color: aquamarine;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+  }
+}
