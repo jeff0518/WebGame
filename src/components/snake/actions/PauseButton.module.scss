@@ -1,0 +1,19 @@
+@use "../../../styles/colors" as color;
+@import "../../../styles/mixin";
+
+.button {
+  width: 100%;
+  padding: 8px 20px;
+  border: 2px solid color.$gray-1;
+  border-radius: 50px;
+  background: none;
+  @include text-styles(1rem, 500, color.$gray-1);
+  cursor: pointer;
+
+  &:hover {
+    color: color.$gray-10;
+    background-color: color.$gray-1;
+    border: 2px solid color.$gray-10;
+    transition: all 0.2s ease-in-out;
+  }
+}

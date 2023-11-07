@@ -1,0 +1,7 @@
+@use "../../../styles/colors" as color;
+@import "../../../styles/mixin";
+
+.container {
+  @include center-both;
+  gap: 0.25rem;
+}
