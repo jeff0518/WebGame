@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Information from "./information/Information";
-import Actions from "./actions/actions";
+import Actions from "./actions/Actions";
 import style from "./index.module.scss";
 
 function SnakeGame() {

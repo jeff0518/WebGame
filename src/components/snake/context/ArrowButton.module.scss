@@ -1,0 +1,48 @@
+@use "../../../styles/colors" as color;
+@import "../../../styles/mixin";
+$BUTTON_SIZE: 60px;
+
+.button {
+  width: $BUTTON_SIZE;
+  height: $BUTTON_SIZE;
+  border-radius: 100%;
+  background-color: color.$gray-1;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background: color.$assistant-yellow-color;
+  }
+  &:active {
+    background: color.$assistant-yellow-color;
+    opacity: 0.9;
+  }
+
+  .imgStyle {
+    width: $BUTTON_SIZE * 0.5;
+    height: $BUTTON_SIZE * 0.5;
+    transform: translate(0%, -15%);
+  }
+}
+
+.arrowUp {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.arrowLeft {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  transform: rotate(-90deg);
+}
+.arrowDown {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  transform: rotate(180deg);
+}
+.arrowRight {
+  grid-column-start: 3;
+  grid-row-start: 2;
+  transform: rotate(90deg);
+}

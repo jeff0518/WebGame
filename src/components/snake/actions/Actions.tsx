@@ -1,4 +1,5 @@
 import PauseButton from "./PauseButton";
+import VirtualKeyboard from "./VirtualKeyboard";
 import style from "./Actions.module.scss";
 
 interface ActionsProps {
@@ -8,7 +9,7 @@ interface ActionsProps {
 function Actions({ isPause }: ActionsProps) {
   return (
     <div className={style.container}>
-      <div>螢幕上的鍵盤</div>
+      <VirtualKeyboard />
       <PauseButton isPause={isPause} />
     </div>
   );
