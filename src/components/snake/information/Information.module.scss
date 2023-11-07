@@ -1,0 +1,13 @@
+@use "../../../styles/colors" as color;
+@import "../../../styles/mixin";
+
+.information {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+  p {
+    @include text-styles(1.24rem, 700, color.$gray-1);
+  }
+}
