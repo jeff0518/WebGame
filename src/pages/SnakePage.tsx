@@ -1,8 +1,11 @@
+import SnakeGame from "../components/snake";
+import style from "../styles/Snake.module.scss";
+
 function SnakePage() {
   return (
-    <>
-      <h1>這是貪食蛇遊戲頁面</h1>
-    </>
+    <div className={style.container}>
+      <SnakeGame />
+    </div>
   );
 }
 
