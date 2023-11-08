@@ -12,8 +12,9 @@ $mapSizeHeight: min(
   #{$MAX_CONTENT_WIDTH} - #{$PAGE_PADDING} * 2
 );
 
-.container {
+.gameScreen_container {
   position: relative;
+  @include center-both;
   .map {
     width: $mapSizeWidth;
     height: $mapSizeHeight;

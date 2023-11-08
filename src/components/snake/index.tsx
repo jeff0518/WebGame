@@ -125,7 +125,7 @@ function SnakeGame() {
 
   useEffect(() => {
     if (score === 0) return;
-    if (score % 5 === 0 && level < 20) {
+    if (score % 1 === 0 && level < 20) {
       setLevel((prevLevel) => prevLevel + 1);
     }
   }, [score]);
@@ -154,7 +154,7 @@ function SnakeGame() {
   }, [keydownHandler]);
 
   return (
-    <div className={style.container}>
+    <div className={style.snake_container}>
       <Information score={score} level={level} />
       <GameScreen
         snake={snake}

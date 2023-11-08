@@ -24,7 +24,7 @@ function GameScreen(props: GameScreenProps) {
     .fill(0)
     .map((_, index) => index);
   return (
-    <div className={style.container}>
+    <div className={style.gameScreen_container}>
       <div className={style.map}>
         {squares.map((row) =>
           squares.map((column) => {
