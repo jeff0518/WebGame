@@ -4,9 +4,10 @@ import style from "./ArrowButton.module.scss";
 
 interface ArrowButtonProps {
   direction: string;
+  onClick: () => void;
 }
 
-function ArrowButton({ direction }: ArrowButtonProps) {
+function ArrowButton({ direction, onClick }: ArrowButtonProps) {
   let directionStyle = "";
   if (direction === ARROW_UP) {
     directionStyle = style.arrowUp;
@@ -19,7 +20,12 @@ function ArrowButton({ direction }: ArrowButtonProps) {
   }
   return (
     <button className={`${style.button} ${directionStyle}`}>
-      <img src={ArrowImage} alt="虛擬鍵盤圖片" className={style.imgStyle} />
+      <img
+        src={ArrowImage}
+        alt="虛擬鍵盤圖片"
+        className={style.imgStyle}
+        onClick={onClick}
+      />
     </button>
   );
 }

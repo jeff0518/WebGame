@@ -8,7 +8,14 @@ import {
 import style from "./VirtualKeyboard.module.scss";
 
 function VirtualKeyboard() {
-  return <div className={style.container}></div>;
+  return (
+    <div className={style.container}>
+      <ArrowButton direction={ARROW_UP} onClick={() => {}} />
+      <ArrowButton direction={ARROW_RIGHT} onClick={() => {}} />
+      <ArrowButton direction={ARROW_DOWN} onClick={() => {}} />
+      <ArrowButton direction={ARROW_LEFT} onClick={() => {}} />
+    </div>
+  );
 }
 
 export default VirtualKeyboard;
