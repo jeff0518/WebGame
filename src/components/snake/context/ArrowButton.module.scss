@@ -5,6 +5,7 @@ $BUTTON_SIZE: 60px;
 .button {
   width: $BUTTON_SIZE;
   height: $BUTTON_SIZE;
+  border: none;
   border-radius: 100%;
   background-color: color.$gray-1;
   display: grid;
