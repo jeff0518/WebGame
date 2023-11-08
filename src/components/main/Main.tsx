@@ -17,7 +17,7 @@ function Main() {
             color="cardInbox__side__back__color2"
             card_image="front__img__2"
             title="貪食蛇"
-            description="貪食蛇你懂的"
+            description="玩家只能操控蛇的頭部朝向（上下左右），並要避免觸碰到自身。"
             gameId="snake"
           />
           <Card
