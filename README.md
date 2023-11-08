@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+## Web Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Web Game 是一個收錄經典小遊戲的一個網站，裡面會有我們熟知的各種小遊戲。
 
-Currently, two official plugins are available:
+![主頁畫面](https://i.imgur.com/z4HAwFV.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 遊戲介紹
 
-## Expanding the ESLint configuration
+* 1.井字遊戲
+   玩法 兩個玩家，一個打圈(◯)，一個打叉（✗），輪流在3乘3的格上打自己的符號，最先以橫、直、斜連成一線則為勝。 如果雙方都下得正確無誤，棋盤將會被填滿而和局。
+* 2.貪食蛇
+  玩家只能操控蛇的頭部朝向（上下左右），並要避免觸碰到自身。
+  每次貪食蛇吃掉一件食物，它的身體便增長一些分數會＋1，當分數是5的倍數時等級會提升。
+  等級上升一等會使蛇的移動速度加快
+* 3.翻牌遊戲
+  建構中！
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+## 本地安裝流程
+* 開啟終端機(Terminal)，並確認已安裝 node.js 與 npm
+* 在終端機輸入以下指令，將本專案 clone 到本機電腦
 ```
+git clone https://github.com/jeff0518/WebGame.git
+```
+* 透過終端機進入存放此專案的資料夾後，輸入以下指令安裝 npm 套件
+```
+npm install
+```
+* 安裝完畢後請輸入以下指令執行專案
+```
+npm run dev
+```
+* 打開瀏覽器輸入以下網址即可開始使用本專案
+```
+http://localhost:3000/
+```
+## 開發工具
+* "react": "18.2.0",
+* "react-dom": "18.2.0",
+* "react-router-dom": "6.18.0",
+* "typescript": "5.0.2",
+* "vite": "4.4.5"
+* "sass": "1.69.5"
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
