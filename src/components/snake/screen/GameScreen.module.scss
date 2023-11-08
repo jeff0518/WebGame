@@ -1,0 +1,64 @@
+@use "../../../styles/Snake.module.scss" as *;
+@use "../../../styles/colors" as color;
+@import "../../../styles/mixin";
+
+//遊戲地圖大小
+$mapSizeWidth: min(
+  calc(100vw - #{$PAGE_PADDING} * 2),
+  #{$MAX_CONTENT_WIDTH} - #{$PAGE_PADDING} * 2
+);
+$mapSizeHeight: min(
+  calc(100vw - #{$PAGE_PADDING} * 2),
+  #{$MAX_CONTENT_WIDTH} - #{$PAGE_PADDING} * 2
+);
+
+.container {
+  position: relative;
+  .map {
+    width: $mapSizeWidth;
+    height: $mapSizeHeight;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+    grid-gap: 2px;
+
+    .square {
+      background-color: color.$gray-1;
+    }
+
+    .square2 {
+      background-color: color.$gray-10;
+    }
+  }
+
+  .popupScreen {
+    width: $mapSizeWidth;
+    height: $mapSizeHeight;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    @include center-both;
+    flex-direction: column;
+
+    .gameOver {
+      margin-top: 1.25rem;
+      @include text-styles(1.5rem, 900, color.$gray-1);
+    }
+
+    .button {
+      border: 2px solid color.$gray-1;
+      background: none;
+      color: color.$gray-1;
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        color: #161616;
+        background: color.$gray-1;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}

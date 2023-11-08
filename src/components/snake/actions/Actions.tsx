@@ -4,13 +4,19 @@ import style from "./Actions.module.scss";
 
 interface ActionsProps {
   isPause: boolean;
+  changeDirectionHandler: () => void;
+  togglePauseHandler: () => void;
 }
 
-function Actions({ isPause }: ActionsProps) {
+function Actions({
+  isPause,
+  changeDirectionHandler,
+  togglePauseHandler,
+}: ActionsProps) {
   return (
     <div className={style.container}>
-      <VirtualKeyboard />
-      <PauseButton isPause={isPause} />
+      <VirtualKeyboard changeDirectionHandler={changeDirectionHandler} />
+      <PauseButton isPause={isPause} togglePauseHandler={togglePauseHandler} />
     </div>
   );
 }
