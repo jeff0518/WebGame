@@ -30,6 +30,15 @@ $mapSizeHeight: min(
     .square2 {
       background-color: color.$gray-10;
     }
+
+    .food {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      background: red;
+      animation: ripple 2s infinite;
+      position: relative;
+    }
   }
 
   .popupScreen {

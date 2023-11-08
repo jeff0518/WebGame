@@ -13,10 +13,11 @@ interface GameScreenProps {
   food: { x: number; y: number };
   isGameStart: boolean;
   gameOver: { x: number; y: number } | undefined;
+  gameStartHandler: () => void;
 }
 
 function GameScreen(props: GameScreenProps) {
-  const { snake, food, isGameStart, gameOver } = props;
+  const { snake, food, isGameStart, gameOver, gameStartHandler } = props;
 
   const { head, bodyList } = snake;
   const squares = Array(GRID_SIZE)
@@ -46,10 +47,10 @@ function GameScreen(props: GameScreenProps) {
           })
         )}
       </div>
-      {isGameStart && (
+      {!isGameStart && (
         <div className={style.popupScreen}>
           {gameOver && <div className={style.gameOver}>Game Over</div>}
-          <button className={style.button}>
+          <button className={style.button} onClick={gameStartHandler}>
             {gameOver ? "重新開始" : "開始遊戲"}
           </button>
         </div>

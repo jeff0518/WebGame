@@ -8,7 +8,7 @@ import {
 import style from "./VirtualKeyboard.module.scss";
 
 interface VirtualKeyboardProps {
-  changeDirectionHandler: () => void;
+  changeDirectionHandler: (val: string) => void;
 }
 
 function VirtualKeyboard({ changeDirectionHandler }: VirtualKeyboardProps) {
@@ -17,25 +17,25 @@ function VirtualKeyboard({ changeDirectionHandler }: VirtualKeyboardProps) {
       <ArrowButton
         direction={ARROW_UP}
         onClick={() => {
-          changeDirectionHandler();
+          changeDirectionHandler(ARROW_UP);
         }}
       />
       <ArrowButton
         direction={ARROW_RIGHT}
         onClick={() => {
-          changeDirectionHandler();
+          changeDirectionHandler(ARROW_RIGHT);
         }}
       />
       <ArrowButton
         direction={ARROW_DOWN}
         onClick={() => {
-          changeDirectionHandler();
+          changeDirectionHandler(ARROW_DOWN);
         }}
       />
       <ArrowButton
         direction={ARROW_LEFT}
         onClick={() => {
-          changeDirectionHandler();
+          changeDirectionHandler(ARROW_LEFT);
         }}
       />
     </div>

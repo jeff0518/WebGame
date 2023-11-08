@@ -30,8 +30,6 @@ export const directionMap: { [key: string]: { x: number; y: number } } = {
 };
 
 export const formatPosition = (position: number) => {
-  console.log("formatPosition 有進來");
-  console.log(position);
   if (position > GRID_SIZE - 1) {
     return 0;
   }

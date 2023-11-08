@@ -4,7 +4,7 @@ import style from "./Actions.module.scss";
 
 interface ActionsProps {
   isPause: boolean;
-  changeDirectionHandler: () => void;
+  changeDirectionHandler: (val: string) => void;
   togglePauseHandler: () => void;
 }
 
