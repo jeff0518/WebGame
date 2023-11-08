@@ -4,7 +4,8 @@ export const ARROW_LEFT = "ArrowLeft";
 export const ARROW_RIGHT = "ArrowRight";
 export const SPACE = "Space";
 export const GRID_SIZE = 30;
-export const SNAKE_INITIAL_SPEED = 200;
+export const SNAKE_INITIAL_SPEED: number = 160;
+export const SPEED_INCREASE_AMOUNT: number = 5;
 
 export const defaultSnake = {
   head: { x: 2, y: 0 },

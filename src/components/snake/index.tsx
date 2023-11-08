@@ -7,8 +7,8 @@ import {
   ARROW_DOWN,
   ARROW_LEFT,
   ARROW_RIGHT,
-  SNAKE_INITIAL_SPEED,
   formatPosition,
+  SPEED_INCREASE_AMOUNT,
 } from "./context/snakeContext";
 
 import Information from "./information/Information";
@@ -64,6 +64,7 @@ function SnakeGame() {
 
   const gameStartHandler = () => {
     setScore(0);
+    setLevel(1);
     setSnake(defaultSnake);
     setIsGameStart(true);
     if (gameOver) {
@@ -114,15 +115,29 @@ function SnakeGame() {
       setFood(createFood());
       setScore((prevScore) => prevScore + 1);
       setSnake((prevSnake) => {
-        const updatedSpeed = prevSnake.speed - SNAKE_INITIAL_SPEED;
         return {
           ...prevSnake,
           maxLength: prevSnake.maxLength + 1,
-          speed: Math.max(updatedSpeed, SNAKE_INITIAL_SPEED),
         };
       });
     }
   }, [eatFood]);
+
+  useEffect(() => {
+    if (score % 5 === 0 && level < 20) {
+      setLevel((prevLevel) => prevLevel + 1);
+    }
+  }, [score]);
+
+  useEffect(() => {
+    setSnake((prevSnake) => {
+      const updatedSpeed = prevSnake.speed - SPEED_INCREASE_AMOUNT;
+      return {
+        ...prevSnake,
+        speed: updatedSpeed,
+      };
+    });
+  }, [level]);
 
   useEffect(() => {
     if (gameOver) {
