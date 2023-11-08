@@ -124,6 +124,7 @@ function SnakeGame() {
   }, [eatFood]);
 
   useEffect(() => {
+    if (score === 0) return;
     if (score % 5 === 0 && level < 20) {
       setLevel((prevLevel) => prevLevel + 1);
     }

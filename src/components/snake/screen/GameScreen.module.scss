@@ -17,7 +17,7 @@ $mapSizeHeight: min(
   .map {
     width: $mapSizeWidth;
     height: $mapSizeHeight;
-    border: 1px solid red;
+    border: 2px solid red;
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
@@ -42,7 +42,7 @@ $mapSizeHeight: min(
   }
 
   .popupScreen {
-    width: $mapSizeWidth;
+    width: 100%;
     height: $mapSizeHeight;
     position: absolute;
     top: 0px;
